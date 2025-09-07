@@ -2,10 +2,280 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      color: #333;
+    }
+
+    /* Navigation bar */
+    header {
+      background: #87cefa; /* Light blue */
+      color: #fff;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      color: #ff69b4; /* Hot pink */
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: color 0.2s, border-bottom 0.2s;
+    }
+
+    nav a:hover {
+      color: #ff69b4;
+      border-bottom: 2px solid #ff69b4;
+    }
+
+    nav a.active {
+      color: #ff69b4;
+      border-bottom: 2px solid #ff69b4;
+    }
+
+    /* Main content */
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #87cefa;
+    }
+
+    /* About section */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .about img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #87cefa;
+    }
+
+    /* Skills */
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .skills li {
+      background: #ffe4ec;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .skills li:hover {
+      background: #ff69b4;
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    .skills i {
+      font-size: 1.2rem;
+      color: #ff69b4;
+    }
+
+    /* Projects */
+    .project {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .project h3 {
+      margin-bottom: 0.5rem;
+      color: #ff69b4; /* Hot pink for project titles */
+    }
+
+    .project p {
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #87cefa;
+      color: #fff;
+      margin-top: 2rem;
+    }
+
+    /* Back to Top button */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      background: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: background 0.3s;
+    }
+
+    #backToTop:hover {
+      background: #e4579c;
+    }
+  </style>
 </head>
 <body>
-  <!-- Add your HTML content here -->
+
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#about" class="active">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About Me -->
+    <section id="about" class="about">
+      <img src="img/IMG_3476.jpeg" alt="Picture of Leo">
+      <div>
+        <h2>About Me</h2>
+        <p>Hello! My name is Julia Brand. I am a Computer Science student at the University of South Florida. I am passionate about creating clean, user-friendly websites and applications.</p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><i class="fa-brands fa-html5"></i> HTML</li>
+        <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+        <li><i class="fa-brands fa-js"></i> JavaScript</li>
+        <li><i class="fa-brands fa-python"></i> Python</li>
+        <li><i class="fa-solid fa-code"></i> C++</li>
+        <li><i class="fa-solid fa-c"></i> C</li>
+        <li><i class="fa-solid fa-database"></i> MySQL</li>
+        <li><i class="fa-brands fa-java"></i> Java</li>
+        <li><i class="fa-brands fa-git-alt"></i> Git</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>PawsUp</h3>
+        <p>Founder of Paws Up. Paws Up is a mobile application that connects potential adopters with shelter animals through a swipe-based interface. Users can view pet profiles, express adoption interest, and help shelters showcase animals in a modern, engaging way.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Julia Brand. All rights reserved.</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script>
+    const backToTopButton = document.getElementById("backToTop");
+    const navLinks = document.querySelectorAll("nav a");
+    const sections = document.querySelectorAll("main section");
+
+    // Show "Back to Top" button when scrolling
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+
+      // Highlight nav link of current section
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 70;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    };
+
+    // Scroll back to top when clicked
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
 </body>
 </html>
